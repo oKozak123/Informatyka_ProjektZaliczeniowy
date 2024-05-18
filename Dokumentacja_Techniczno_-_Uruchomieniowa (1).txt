@@ -1,0 +1,43 @@
+Szyfrowanie Puzzelkowe
+
+Wstęp
+
+Aplikacja "Szyfrowanie Puzzelkowe" uzwa metody kryptografii wizualnej w formie puzzli.
+
+Struktura Aplikacji
+
+main.py - Główny plik wykonywalny, uruchamiający interfejs aplikacji.
+main_window.py - Plik definiujący główne okno aplikacji.
+puzzle_view.py - Plik zawierający klasę widoku QGraphicsView, w którym wyświetlane są puzzelki.
+puzzle_piece.py - Plik zawierający klasę reprezentującą pojedynczy puzzel.
+puzzle_quantity_events.py - Plik zawierający klasę obsługującą zdarzenia dotyczące ilości puzzelków.
+
+Opis Kluczowych Komponentów
+1. main.py
+Plik main.py jest głównym plikiem wykonywalnym aplikacji.
+Odpowiada za uruchomienie interfejsu użytkownika oraz inicjalizację głównego okna (MainWindow).
+
+2. main_window.py
+Plik main_window.py definiuje klasę MainWindow, która jest głównym oknem aplikacji.
+Okno składa się z widoku puzzelków, interaktywnego pola do wyboru ilości puzzelków oraz przycisków do importowania obrazków oraz zapisywania rozwiązanych puzzelków.
+
+3. puzzle_view.py
+Plik puzzle_view.py zawiera klasę PuzzleView, która jest podklasą QGraphicsView. Ta klasa obsługuje wyświetlanie puzzelków oraz interakcję użytkownika z nimi, taką jak przeciąganie, upuszczanie i rozwiązywanie.
+
+4. puzzle_piece.py
+Plik puzzle_piece.py definiuje klasę PuzzlePiece, która reprezentuje pojedynczy puzzel.
+
+5. puzzle_quantity_events.py
+Plik puzzle_quantity_events.py zawiera klasę puzzle_quantity_events, która obsługuje zdarzenia związane z wyborem ilości puzzelków przez użytkownika.
+
+Uruchomienie Aplikacji
+Aby uruchomić aplikację, należy uruchomicz plik "Szyfrowanie Puzzelkowe.exe" lub plik "main.py". 
+
+Zależności
+Aplikacja korzysta z biblioteki PyQt5 do tworzenia interfejsu graficznego oraz z modułu random do losowego układania puzzelków.
+
+Podsumowanie
+Aplikacja "Szyfrowanie Puzzelkowe" umożliwia szyfrowanie obrazów poprzez ich podział na puzzelki i układanie ich w losowy sposób.
+Obrazek można zapisać w każdej chwili niezależnie od stanu jego ułożenia.
+Liczbę puzzli można zwiększać i zmniejszać, dla uproszeczenia algorytmu są liczba puzzli jest liczbą piarwiestkowalną, aby zachować symetryczny podział obrazka.
+Dla ułatwienia układania puzzli lub w przypdaku gdy obraz jest zbyt duży dla okna aplikacji, dodano funkcję przybliżania i oddalania obrazu.
